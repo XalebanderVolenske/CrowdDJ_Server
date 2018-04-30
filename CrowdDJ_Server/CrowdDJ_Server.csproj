@@ -147,24 +147,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrator.cs">
+    <Compile Include="Controllers\AdministratorController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Models\Administrator.cs">
       <DependentUpon>CrowdDJModel.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="CrowdDJModel.Context.cs">
+    <Compile Include="Models\CrowdDJModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrowdDJModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="CrowdDJModel.cs">
+    <Compile Include="Models\CrowdDJModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrowdDJModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="CrowdDJModel.Designer.cs">
+    <Compile Include="Models\CrowdDJModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrowdDJModel.edmx</DependentUpon>
@@ -172,38 +174,43 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Guest.cs">
+    <Compile Include="Models\Guest.cs">
       <DependentUpon>CrowdDJModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Party.cs">
+    <Compile Include="Models\Party.cs">
       <DependentUpon>CrowdDJModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Partytweet.cs">
+    <Compile Include="Models\Partytweet.cs">
       <DependentUpon>CrowdDJModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Playlist.cs">
+    <Compile Include="Models\Playlist.cs">
       <DependentUpon>CrowdDJModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Track.cs">
+    <Compile Include="Models\Track.cs">
       <DependentUpon>CrowdDJModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="User.cs">
+    <Compile Include="Models\User.cs">
       <DependentUpon>CrowdDJModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Vote.cs">
+    <Compile Include="Models\Vote.cs">
       <DependentUpon>CrowdDJModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\astronaut_wallpaper.jpg" />
+    <Content Include="Content\bootstrap-darkly.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="CrowdDJModel.Context.tt">
+    <Content Include="Content\LoginStyle.css" />
+    <Content Include="Content\login_wallpaper1.jpg" />
+    <Content Include="Models\CrowdDJModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>CrowdDJModel.Context.cs</LastGenOutput>
       <DependentUpon>CrowdDJModel.edmx</DependentUpon>
     </Content>
-    <Content Include="CrowdDJModel.tt">
+    <Content Include="CrowdDJModel.edmx.sql" />
+    <Content Include="Models\CrowdDJModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>CrowdDJModel.edmx</DependentUpon>
       <LastGenOutput>CrowdDJModel.cs</LastGenOutput>
@@ -217,11 +224,11 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="CrowdDJModel.edmx">
+    <EntityDeploy Include="Models\CrowdDJModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>CrowdDJModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="CrowdDJModel.edmx.diagram">
+    <Content Include="Models\CrowdDJModel.edmx.diagram">
       <DependentUpon>CrowdDJModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -249,10 +256,16 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\User\Create.cshtml" />
+    <Content Include="Views\User\Delete.cshtml" />
+    <Content Include="Views\User\Details.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\Administrator\Login.cshtml" />
+    <Content Include="Views\Shared\_LayoutLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
